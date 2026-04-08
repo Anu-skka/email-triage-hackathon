@@ -4,4 +4,4 @@ pyyaml
 openai
 numpy
 uvicorn
-fastapigit add .
+fastapi
