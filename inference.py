@@ -172,5 +172,22 @@ def main():
     print("   • Department routing included")
     print("="*50)
 
+from fastapi import FastAPI
+import uvicorn
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"status": "running", "message": "Email Triage AI - Meta Hackathon 2026"}
+
+@app.get("/run")
+def run():
+    results = {}
+    for task in ["easy", "medium", "hard"]:
+        score = run_agent_on_task(task)
+        results[task] = score
+    return results
+
 if __name__ == "__main__":
-    main()
+    uvicorn.run(app, host="0.0.0.0", port=7860)
