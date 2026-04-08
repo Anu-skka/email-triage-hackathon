@@ -1,9 +1,25 @@
+# openenv.yaml
 name: email-triage-env
-version: "1.0.0"
-description: "A real-world email triage environment where an AI agent learns to sort, prioritize and categorize emails"
-author: "IgniteX"
+version: 1.0.0
+description: Email Triage Environment for AI Agent
+
+environment:
+  class: environment.EmailTriageEnvironment
+  entry_point: environment.py
+
 tasks:
-  - easy
-  - medium
-  - hard
-entrypoint: environment.py
+  easy:
+    description: "Is this email spam or not spam?"
+    max_score: 4.0
+    
+  medium:
+    description: "Category + Urgency classification"
+    max_score: 4.0
+    
+  hard:
+    description: "Category + Urgency + Department routing"
+    max_score: 6.0
+
+metadata:
+  team: IgniteX
+  hackathon: Meta Hackathon 2026
