@@ -2,3 +2,6 @@ openenv
 pydantic
 pyyaml
 openai
+numpy
+uvicorn
+fastapigit add .
