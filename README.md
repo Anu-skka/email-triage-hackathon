@@ -1,3 +1,11 @@
+---
+title: Email Triage Env
+emoji: 📧
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
 # 📧 Email Triage Environment
 
 **Team:** IgniteX  
